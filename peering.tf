@@ -5,3 +5,4 @@ resource "aws_vpc_peering_connection" "management-vpc-to-env-vpc" {
   auto_accept = true
   tags        = local.vpc_peering_tags
 }
+
