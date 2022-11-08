@@ -12,3 +12,6 @@ resource "aws_subnet" "main" {
 //  route_table_id = var.route_table_id
 //}
 
+output "subnets" {
+  value = aws_subnet.main
+}
