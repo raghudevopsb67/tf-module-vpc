@@ -37,3 +37,10 @@ output "subnets" {
   value = module.lm-subnets
 }
 
+resource "null_resource" "test" {
+  provisioner "local-exec" {
+    command = "echo ${module.lm-subnets}"
+  }
+}
+
+
