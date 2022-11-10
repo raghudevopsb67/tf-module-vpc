@@ -26,7 +26,7 @@ locals {
 }
 
 output "test" {
-  value = local.public_route_tables
+  value = flatten(local.public_route_tables)
 }
 
 //resource "aws_route" "internet_gateway_route_to_public_subnets" {
