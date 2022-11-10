@@ -20,8 +20,17 @@ resource "aws_eip" "ngw" {
 //  }
 //}
 
+locals {
+  private_route_tables = [for i, j in module.private_subnets : j.rt]
+}
+
+output "test" {
+  value = local.private_route_tables
+}
+
+//
 //resource "aws_route" "internet_gateway_route_to_public_subnets" {
-//  count = length(????)
+//  count = length()
 //  route_table_id            = element(???, count.index)
 //  destination_cidr_block    = each.value.cidr_block
 //  vpc_peering_connection_id = aws_vpc_peering_connection.management-vpc-to-env-vpc.*.id[0]
