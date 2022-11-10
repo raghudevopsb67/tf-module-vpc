@@ -45,6 +45,10 @@ output "subnets" {
   value = module.lm-subnets
 }
 
+output "route_tables" {
+  value = aws_route_table.aws_route_table
+}
+
 
 //resource "null_resource" "test" {
 //  provisioner "local-exec" {
