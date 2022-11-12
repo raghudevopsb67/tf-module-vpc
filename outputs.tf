@@ -7,3 +7,7 @@ output "private_subnets" {
 //}
 //
 //
+
+output "test" {
+  value = lookup(module.public_subnets, "public", null)
+}
