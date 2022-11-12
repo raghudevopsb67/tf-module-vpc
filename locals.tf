@@ -9,4 +9,7 @@ locals {
     ENV     = var.env
     PROJECT = "roboshop"
   }
+
+  //all_route_tables =
+
 }
